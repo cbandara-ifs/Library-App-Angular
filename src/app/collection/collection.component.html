@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="filters">
+    <a
+      class="button"
+      routerLink="/collection/"
+      [queryParams]="{ filter: 'JavaScript' }"
+      routerLinkActive="active"
+      >JavaScript</a
+    >
+    <a
+      class="button"
+      routerLink="/collection/"
+      [queryParams]="{ filter: 'Software Practices' }"
+      routerLinkActive="active"
+      >Software Practices</a
+    >
+    <a
+      class="button"
+      routerLink="/collection/"
+      [queryParams]="{ filter: 'Software Architecture' }"
+      routerLinkActive="active"
+      >Software Architecture</a
+    >
+    <a
+      class="button"
+      routerLink="/collection/"
+      [queryParams]="{ filter: 'Career' }"
+      routerLinkActive="active"
+      >Career</a
+    >
+    <a
+      class="button"
+      [routerLink]="['/collection/', '']"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >All</a
+    >
+  </div>
+
+  <ul class="books">
+    <li class="book-item" *ngFor="let book of getFilteredBooks()">
+      <app-book-details
+        [book]="book"
+        (lend)="addBooksToCart(book)"
+      ></app-book-details>
+    </li>
+  </ul>
+</div>

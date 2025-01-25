@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  align-self: center;
+}
+
+.empty-cart {
+  margin: 0 100px;
+  align-self: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.cart {
+  margin: 0 100px;
+  border-top: 2px solid #999;
+}
+
+.cart-item {
+  border-bottom: 2px solid #999;
+}
+
+.total {
+  margin: 25px 175px 0 0;
+  align-self: right;
+  font-size: 25px;
+  text-align: right;
+}
+
+/* Product Details */
+.book {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.book .book-details {
+  display: flex;
+  align-items: center;
+}
+
+.book img {
+  width: 125px;
+}
+
+.book .book-info {
+  margin-left: 25px;
+}
+
+.book .title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.book .slug {
+  margin-top: 3px;
+  font-size: 18px;
+}
+
+.book .category {
+  margin-top: 20px;
+  color: #777;
+}
+
+.book .price {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 190px;
+  color: #555;
+  border-left: 2px solid #aaa;
+  margin-left: 50px;
+}
+
+.book .price button {
+  padding: 10px;
+  width: 100px;
+}
+
+.discount {
+  margin-top: -15px;
+  color: #d25ca1;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  font-size: 18px;
+}

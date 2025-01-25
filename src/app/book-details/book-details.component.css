@@ -1,0 +1,60 @@
+.book {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.book .book-details {
+  display: flex;
+  align-items: center;
+}
+
+.book img {
+  width: 125px;
+}
+
+.book .book-info {
+  margin-left: 25px;
+}
+
+.book .title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.book .slug {
+  margin-top: 3px;
+  font-size: 18px;
+}
+
+.book .category {
+  margin-top: 20px;
+  color: #777;
+}
+
+.book .lend {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 190px;
+  color: #555;
+  border-left: 2px solid #aaa;
+  margin-left: 50px;
+}
+
+.book .lend button {
+  padding: 10px;
+  width: 100px;
+}
+
+.discount {
+  margin-top: -15px;
+  color: #d25;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  font-size: 18px;
+}

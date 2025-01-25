@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  background-image: url("/assets/images/library-banner.jpg");
+  background-repeat: no-repeat;
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  margin-left: -8px;
+  margin-right: -8px;
+}
