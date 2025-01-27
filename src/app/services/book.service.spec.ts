@@ -1,29 +1,40 @@
-import { TestBed } from '@angular/core/testing';
-import {
-  HttpClientTestingModule,
-  HttpTestingController,
-} from '@angular/common/http/testing';
-import { BookService } from './book.service';
+import { TestBed } from "@angular/core/testing";
+import { BookService } from "./book.service";
+import { MockApiHttpService } from "./mock-api-http.service";
+import { of } from "rxjs";
+import { IBook } from "../models/book.model";
 
-describe('BookService', () => {
-  let service: BookService;
-  let httpTestingController: HttpTestingController;
+describe("BookService", () => {
+  let bookService: BookService;
+  let mockApiHttp: MockApiHttpService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [BookService],
+    mockApiHttp = new MockApiHttpService();
+
+    bookService = new BookService(<any>mockApiHttp);
+  });
+
+  it("should be created", () => {
+    expect(bookService).toBeTruthy();
+  });
+
+  it("should get all books", () => {
+    const mockBook: IBook = {
+      id: 2,
+      title: "React: The Big Picture",
+      slug: "react-big-picture",
+      authorId: 3,
+      category: "JavaScript",
+    };
+
+    mockApiHttp.getCallFake((url: string) => {
+      return of([mockBook]);
     });
 
-    service = TestBed.inject(BookService);
-    httpTestingController = TestBed.inject(HttpTestingController);
-  });
+    bookService.getBooks().subscribe((book) => {
+      expect(book).toEqual([mockBook]);
+    });
 
-  afterEach(() => {
-    httpTestingController.verify();
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(mockApiHttp.get).toHaveBeenCalledWith("api/books");
   });
 });
