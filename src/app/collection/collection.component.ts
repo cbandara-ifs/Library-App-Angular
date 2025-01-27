@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IBook } from '../book-details/book.model';
+import { IBook } from '../models/book.model';
 import { BookService } from '../book-details/book.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CartService } from '../cart/cart.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-collection',
