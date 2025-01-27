@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppRoutingModule } from "./app-routing.module";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SiteHeaderComponent } from './site-header/site-header.component';
-import { HomeComponent } from './home/home.component';
-import { CollectionComponent } from './collection/collection.component';
-import { BookDetailsComponent } from './book-details/book-details.component';
-import { HttpClientModule } from '@angular/common/http';
-import { CartComponent } from './cart/cart.component';
+import { AppComponent } from "./components/layout/app.component";
+import { SiteHeaderComponent } from "./components/site-header/site-header.component";
+import { HomeComponent } from "./components/home/home.component";
+import { CollectionComponent } from "./components/collection/collection.component";
+import { BookDetailsComponent } from "./components/book-details/book-details.component";
+import { CartComponent } from "./components/cart/cart.component";
 
 @NgModule({
   declarations: [

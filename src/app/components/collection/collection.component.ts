@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { IBook } from '../models/book.model';
-import { BookService } from '../book-details/book.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CartService } from '../services/cart.service';
+import { Component, OnInit } from "@angular/core";
+import { IBook } from "../../models/book.model";
+import { BookService } from "../../services/book.service";
+import { ActivatedRoute, Router } from "@angular/router";
+import { CartService } from "../../services/cart.service";
 
 @Component({
-  selector: 'app-collection',
-  templateUrl: './collection.component.html',
-  styleUrls: ['./collection.component.css'],
+  selector: "app-collection",
+  templateUrl: "./collection.component.html",
+  styleUrls: ["./collection.component.css"],
 })
 export class CollectionComponent implements OnInit {
   books!: IBook[];
-  filter: string = '';
+  filter: string = "";
 
   constructor(
     private bookSrvc: BookService,
@@ -25,18 +25,18 @@ export class CollectionComponent implements OnInit {
       this.books = books;
     });
     this.route.queryParams.subscribe((params) => {
-      this.filter = params['filter'] ?? '';
+      this.filter = params["filter"] ?? "";
     });
   }
 
   getFilteredBooks() {
-    return this.filter === ''
+    return this.filter === ""
       ? this.books
       : this.books.filter((book) => book.category === this.filter);
   }
 
   addBooksToCart(book: IBook) {
     this.cartSrvc.add(book);
-    this.router.navigate(['/cart']);
+    this.router.navigate(["/cart"]);
   }
 }
