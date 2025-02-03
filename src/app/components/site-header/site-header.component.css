@@ -1,67 +1,92 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-  font-size: 24px;
-  margin-bottom: 10px;
-  margin: -3px -8px 0 -8px;
-  padding: 0 8px 5px 8px;
-  border-bottom: 2px solid #818285;
+header {
+  width: 100%;
+  z-index: 10;
 }
 
-.left {
+header.stick {
+  position: fixed;
+  top: 0;
+}
+
+header.a {
+  text-decoration: none;
+}
+
+header.library-logo {
+  width: 100px;
+  height: 50px;
+}
+
+.super-header {
+  background-color: #e5e5e6;
+  color: #8b8b91;
+  height: 32px;
+  padding: 2px 15px;
+  font-size: 1rem;
   display: flex;
+  justify-content: end;
   align-items: center;
+
+  .mdi {
+    background-color: #8b8b91;
+  }
+  .jr-icon {
+    background-color: #00153f;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
-.left * {
-  margin-right: 25px;
+.mdi-color-secondary {
+  background-color: #ffffff;
 }
 
-.logo {
-  height: 65px;
+header .navbar {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px #18182314;
+  margin: 8px;
+  padding: 0 12px;
 }
 
-.cart {
-  display: flex;
+.navbar {
   position: relative;
-}
-
-.cartCount {
-  position: absolute;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
-  width: 20px;
-  height: 20px;
-  top: -7px;
-  right: -15px;
-  border-radius: 25px;
-  background-color: #f590c4;
-  color: white;
-  font-size: 14px;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
 
-.cartCount div {
-  margin: auto;
+.navbar-light {
+  border-bottom: 1px solid #cccccf;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .navbar-toggler {
+    border: none;
+
+    .mdi {
+      background-color: #296532;
+    }
+  }
 }
 
-.right {
-  display: flex;
-  align-items: center;
-  margin-right: 25px;
+.library-logo {
+  background-image: url(/assets/images/siteHeader.png);
+  width: 201px;
 }
 
-.right * {
-  margin-left: 25px;
-}
-
-.right img {
-  height: 40px;
-  cursor: pointer;
-}
-
-.sign-out {
+.fit-mobile-menu-item {
   position: absolute;
-  top: 60px;
-  right: 30px;
+  right: 60px;
+  top: 0;
+
+  .navbar-nav .nav-link {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }

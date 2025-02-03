@@ -1,0 +1,13 @@
+.page-wrapper {
+  background-color: #f2f2f3;
+  padding-top: 50px;
+  padding-bottom: 15px;
+
+  &.with-notification-bar {
+    padding-top: 80px;
+  }
+
+  &.with-fixed-footer {
+    padding-bottom: 40px;
+  }
+}

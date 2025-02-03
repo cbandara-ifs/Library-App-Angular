@@ -9,6 +9,9 @@ import { HomeComponent } from "./components/home/home.component";
 import { CollectionComponent } from "./components/collection/collection.component";
 import { BookDetailsComponent } from "./components/book-details/book-details.component";
 import { CartComponent } from "./components/cart/cart.component";
+import { BookSearchComponent } from "./components/book-search/book-search.component";
+import { AuthMenuComponent } from "./components/auth-menu/auth-menu.component";
+import { PageHeaderComponent } from "./components/page-header/page-header.component";
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { CartComponent } from "./components/cart/cart.component";
     CollectionComponent,
     BookDetailsComponent,
     CartComponent,
+    BookSearchComponent,
+    AuthMenuComponent,
+    PageHeaderComponent,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
