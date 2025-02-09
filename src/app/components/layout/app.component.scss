@@ -1,0 +1,12 @@
+@use "../../scss/layout";
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+.main-body {
+  padding: 130px 0 70px;
+
+  @include media-breakpoint-down(md) {
+    padding: 130px 15px 70px;
+  }
+}

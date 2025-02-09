@@ -1,5 +1,7 @@
+@use "variables" as v;
+
 .page-wrapper {
-  background-color: #f2f2f3;
+  background-color: v.$grey5;
   padding-top: 50px;
   padding-bottom: 15px;
 
