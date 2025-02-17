@@ -10,7 +10,10 @@ import { CollectionComponent } from "./components/collection/collection.componen
 import { BookDetailsComponent } from "./components/book-details/book-details.component";
 import { CartComponent } from "./components/cart/cart.component";
 import { PageHeaderComponent } from "./components/page-header/page-header.component";
+
 import { SiteHeaderModule } from "./components/site-header/site-header.module";
+import { AuthMenuModule } from "./components/auth-menu/auth-menu.module";
+import { LogoutModule } from "./pages/logout/logout.module";
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import { SiteHeaderModule } from "./components/site-header/site-header.module";
     HttpClientModule,
     AppRoutingModule,
     SiteHeaderModule,
+    AuthMenuModule,
+    LogoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,33 @@
+<div class="container">
+  <form #signInForm="ngForm" class="form" (ngSubmit)="signIn()">
+    <img class="logo" src="/assets/images/siteHeader.png" />
+    <div class="sign-in">Sign In</div>
+    <div class="sub-text">to collect awesome books</div>
+    <input
+      name="email"
+      required
+      email
+      #email="ngModel"
+      [(ngModel)]="credentials.email"
+      placeholder="Email Address"
+      type="text"
+    />
+    <input
+      name="password"
+      required
+      #password="ngModel"
+      [(ngModel)]="credentials.password"
+      placeholder="Password"
+      type="password"
+    />
+    <div class="buttons">
+      <button
+        type="submit"
+        [disabled]="signInForm.form.invalid"
+        class="button cta"
+      >
+        Sign In
+      </button>
+    </div>
+  </form>
+</div>
